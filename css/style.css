@@ -1,0 +1,50 @@
+body {
+  font-family: "Aladin", cursive;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: pink;
+  color: green;
+}
+
+.rainbow-title {
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+#gridContainer {
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  width: 400px;
+  position: relative;
+  justify-self: center;
+}
+
+.cell {
+  border: 1px solid black;
+  background: "white";
+  display: inline-block;
+  aspect-ratio: 1;
+}
+
+.gridRow {
+  max-height: 30px;
+}
+
+#directions {
+  visibility: hidden;
+}
+
+#submitDirections {
+}
