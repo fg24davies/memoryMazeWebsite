@@ -1,5 +1,9 @@
 ### Memory Maze Game
 
+Testing in Jest, unit and feature
+
+
+
 [] Host on Heroku
 
 JS
