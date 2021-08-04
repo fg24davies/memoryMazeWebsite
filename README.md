@@ -1,129 +1,42 @@
-## Task
+### Memory Maze Game
 
-You will be given a 2D array of the maze and an array of directions. Your task is to follow the directions given. If you reach the end point before all your moves have gone, you should return Finish. If you hit any walls or go outside the maze border, you should return Dead. If you find yourself still in the maze after using all the moves, you should return Lost
+[] Host on Heroku
 
-```
-maze = [[1,1,1,1,1,1,1],
-        [1,0,0,0,0,0,3],
-        [1,0,1,0,1,0,1],
-        [0,0,1,0,0,0,1],
-        [1,0,1,0,1,0,1],
-        [1,0,0,0,0,0,1],
-        [1,2,1,0,1,0,1]]
-```
+JS
 
-KEY:
+[] Congratulations message if won and play again
 
-```
-      0 = Safe place to walk
-      1 = Wall
-      2 = Start Point
-      3 = Finish Point
+[] Create 10 mazes and then randomly selected on Click
 
-direction = ["N","N","N","N","N","E","E","E","E","E"] == "Finish"
-```
+[] Try again button if you fail
 
-## Rules
 
-1. The Maze array will always be square i.e. N x N but its size and content will alter from test to test.
 
-2. The start and finish positions will change for the final tests.
+Content
 
-3. The directions array will always be in upper case and will be in the format of N = North, E = East, W = West and S = South.
+[] Write clearer instructions
 
-4. If you reach the end point before all your moves have gone, you should return Finish.
 
-5. If you hit any walls or go outside the maze border, you should return Dead.
 
-6. If you find yourself still in the maze after using all the moves, you should return Lost.
+CSS
+[] choose colour pattern from book
 
-For the Maze (let it be maze) at the top with those starting points:
 
-| Input | Output |
-| ----- | ------ |
+[] rainbow text the title
 
-| [[1,0],
-   [2,3]], ["N"] | "Dead" |
-| [[1,0],
-   [2,3]], ["E"] | "Finish" |
-| [[0,0,3],
-   [0,1,0],
-   [2,1,0]], ["W"] | "Lost" |  
-| [[0,0,3],
-   [0,1,0],
-   [2,1,0]], ["N","N"] | "Lost" |  
-| [[0,0,3],
-   [0,1,0],
-   [2,1,0]], ["W"] | "Lost" |  
-| maze, ["N"] | "Lost" |
-| maze, ["E"] | "Dead" |
-| maze, ["N","N","N","N","N","E","E","E","E","E"] | "Finish" |
-| maze, ["N","E","E","E","E","N","N","N","N","E"] | "Finish" |
-| maze, ["N","N","N","W","W"] | "Dead" |
+[] move the maze to the middle
 
-Notes: if there is a zero in position 0 of one of the arrays then you can walk through it into the END of that array eg going West in [0,0,1,0,0,0,1] would take you in a "1" and therefore die.
+[] style buttons
 
-Since the start and end positions move, you need to check if you actually 'land' on 3 from 2.
+[] rainbow text the 
 
-Steps
 
-- maze and directions are given as arguments
-- Return the array position of the start - find by index '2'
+For the future
 
-return the position mover
+Easy 5x5 , Medium 7x7 , Hard 10x10
 
-- Go through the direction array
-- If the instruction = N, add one to the Y position of the starting point
-- Check what this element is:
-  if it's 0, you can keep going / return lost
-  if it's 1, return "dead"
-  if it's 3, return "finish"
-- PICK UP PONT \_ just found where the start point is CHANGE IR
+Generate a maze on click 
 
-South at end of maze go to 0
-East at end of maze go to 0
 
-North at 0 maze go to END
-West at 0 maze of maze go to END
 
-1. calculate original starting position (called startPosition)
-2. calculate new position using direction (include edge case of edge of maze)
-3. see if new position lands you on Dead, Finish, Lost
-4. if dead or finish - end and return "Dead" / "Finish"
-5. if Lost check if at end of directions, if yes return "Lost"
-6. if not at end, repeat steps 3 - 6
 
-### Review comments
-
-- remove console.logs
-
-Let's try moving these functions out from inside the mazeRunner function to just being standalone functions. Having functions nested like this can potentially lead to some issues where there's a variable in the outer scope that's shadowed in the inner scope. More concretely, in this case you have maze as a parameter to the startingPosition function, but also as a parameter to the mazeRunner function. You could get in issues with knowing which maze is being referred to in this function
-
-const isOutOfBounds = (maze, position) => {
-if (position.includes(maze.length) || position.includes(-1)) {
-return "Dead";
-}
-};
-
-NOTES to edit!
-
-doesn't make sense to give the directions to each new Maze
-
-you make a maze and then you attempt it with different set of directions.
-But what is a good name for it?!
-
-this could turn into a photographic memory game
-
-flashes up a quiz you have to put in your directions and see if you win
-
-###
-
-[x] div for grid container for the grid
-
-[x] establish grid using javascript function (7 x 7 (maze.length))
-
-[x] create new divs inside a grid
-
-another function to loop over the grid and colour each depending on array
-
-CSS - need to remove the gaps beteen the rows in the grid?!
