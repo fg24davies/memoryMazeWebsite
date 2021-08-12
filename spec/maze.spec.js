@@ -1,4 +1,4 @@
-const Maze = require("../src/maze");
+const Maze = require("../public/src/maze");
 
 describe("results for a 2x2 maze", () => {
   const maze1 = new Maze([

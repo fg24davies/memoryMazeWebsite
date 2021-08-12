@@ -1,10 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.use(express.static("UI"));
-app.use(express.static("src"));
-app.use(express.static("spec"));
-app.use(express.static("css"));
+app.use(express.static("public"));
 
 // define the first route
 app.get("/", function (req, res) {

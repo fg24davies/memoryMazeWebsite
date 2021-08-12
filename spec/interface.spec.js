@@ -5,7 +5,7 @@ test("A maze is created when the new maze button is clicked", () => {
     <div id="gridContainer">
   `;
 
-  require("../UI/interface");
+  require("../public/interface");
 
   const container = document.getElementById("gridContainer");
   const createMaze = document.getElementById("createMaze");
