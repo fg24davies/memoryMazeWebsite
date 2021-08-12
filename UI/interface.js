@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   maze1 = newGame.maze.flat();
 
   const submitDirections = document.getElementById("submitDirections");
-  const playButton = document.getElementById("createMaze");
+  const playButton = document.getElementById("playButton");
   const container = document.getElementById("gridContainer");
 
   function createMaze(maze) {
@@ -25,11 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
       let cell = document.createElement("div");
 
       if (maze[c] === 1) {
-        cell.style.backgroundColor = "brown";
+        cell.style.backgroundColor = "rgb(130, 79, 3)";
       } else if (maze[c] === 2) {
-        cell.style.backgroundColor = "green";
+        cell.style.backgroundColor = "red";
       } else if (maze[c] === 3) {
-        cell.style.backgroundColor = "light blue";
+        cell.style.backgroundColor = "white";
+        cell.innerHTML = "EXIT";
+      } else if (maze[c] === 0) {
+        cell.style.backgroundColor = "rgb(186, 245, 135)";
       }
 
       container.appendChild(cell).className = "cell";
@@ -40,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("instructions").style.visibility = "hidden";
     document.getElementById("newMaze").style.visibility = "hidden";
   }
-  function hideMaze() {
-    container.style.visibility = "hidden";
+  function removeMaze() {
+    container.remove();
   }
 
   function showDirectionsField() {
@@ -52,13 +55,21 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(result);
     document.getElementById("directions").style.visibility = "hidden";
     let outcome = document.createElement("p");
-    outcome.innerHTML = "You are..." + result;
+    if (result === "Finish") {
+      outcome.innerHTML = "Congratulations, you are free!";
+    } else {
+      outcome.innerHTML = "You are..." + result;
+      let tryAgainButton = document.createElement("button");
+    }
+
     document.getElementById("resultContainer").appendChild(outcome).className =
       "outcome";
+    document
+      .getElementById("resultContainer")
+      .appendChild(tryAgainButton).className = "button";
   }
 
   playButton.addEventListener("click", function () {
-    //createMaze(maze1);
     hideEverythingButMaze();
     // Maze will appear after 1s
     setTimeout(() => {
@@ -66,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
 
     setTimeout(() => {
-      hideMaze();
+      removeMaze();
       showDirectionsField();
     }, 5000);
     // setTimeout(hideMaze, 6000);

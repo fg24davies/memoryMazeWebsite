@@ -14,47 +14,27 @@
   <link href="../css/style.css" type="text/css" rel="stylesheet" /> 
 </head>
 <body>
-
-  
-     <h1 class="rainbow-text">Maze Memory Game</h1> 
-
-  
-  <div id="instructions">   
-    <h2 class="welcome"> 
-     Welcome to Maze Game! A game that tests your photographic memory. 
-    </h2>
-
-    <p class="rules"> You will be shown a grid that represents a maze for 5 seconds. 
-     The brown squares are the walls, the entrance to the maze is red and the exit is green. 
-      You are free to walk on the white space.
-    Directions are either North (N), South (S), East(E) or West(W). One N direction moves one square up, one E direction moves one square right and so on.
-    Your task is to memorise the maze and input the directions in the box
-    Some rules: <br> 
-    - If you hit a wall you are dead <br> 
-    - If you don't give enough instructions you will stay lost in the maze <br> 
-    - If you go outside the borders of the maze you will die <br> 
-     </p>
-  </div>
+  <div class="grid">
+    <h1 class="rainbow-text">Maze Memory Game</h1> 
+    <div id="instructions">   
+      <p class="rules"> Remember a safe route (green squares) through the maze to reach the white exit square and escape safely! <br> 
+        Directions: one square up = N | one square down = S | one square right = E | one square left = W
+      </p>
+    </div>
+    <div id="gridContainer">
+    </div>
+    <div id="newMaze">
+      <button type="button" id="playButton"> Play!</button>
+    </div>
     
-  <div id="newMaze">
-    <button type="button" id="createMaze"> New Maze </button>
+    <div id="directions">
+      <p> Enter your directions! </p>
+      <form class="form">
+        <input type="text" id="solution" name="solution" placeholder="eg.'NNNNN'">
+        <input type="button" id="submitDirections" value="Escape!">
+      </form>
+     </div>
+    <div id="resultContainer"> </div>
   </div>
-
-  <div id="gridContainer">
-  </div>
-
-
-
-  <div id="directions">
-    <p> Enter your directions below! </p>
-    <form>
-      <input type="text" id="solution" name="solution" placeholder="eg.'NNNNN'">
-      <input type="button" id="submitDirections" value="Escape!">
-    </form>
-  </div>
-
-  <div id="resultContainer"> </div>
-
-  
 </body>
 </html>

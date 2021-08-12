@@ -4,54 +4,26 @@ body {
   justify-content: center;
   text-align: center;
   color: green;
+  background: pink;
 }
 
-.animated-title {
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  display: block;
-  position: absolute;
-  max-width: 225px;
+.cell {
+  border-radius: 10px;
+  border: 0.5px solid black;
+  background: "white";
+  display: inline-block;
+  aspect-ratio: 1;
 }
 
-.title {
-  transform: translateX(-50%) rotate(-10deg);
-  display: block;
-  float: left;
-  left: 50%;
-  position: relative;
+#directions {
+  visibility: hidden;
 }
 
-.title span {
-  transform: skew(-10deg);
-  display: block;
-  float: left;
-  min-width: 10px;
-  min-height: 10px;
-  position: relative;
+.grid {
+  display: grid;
+  place-items: center;
 }
 
-.rainbow-text {
-  align-self: center;
-  text-align: center;
-  font-size: 100px;
-  height: 100px;
-  width: 700px;
-  background-image: linear-gradient(
-    to left,
-    violet,
-    indigo,
-    blue,
-    green,
-    yellow,
-    orange,
-    red
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 #gridContainer {
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
@@ -61,20 +33,96 @@ body {
   justify-self: center;
 }
 
-.cell {
-  border: 1px solid black;
-  background: "white";
-  display: inline-block;
-  aspect-ratio: 1;
+.form {
+  display: grid;
+  place-items: center;
 }
 
 .gridRow {
   max-height: 30px;
 }
 
-#directions {
-  visibility: hidden;
+p {
+  font-size: 30px;
+}
+
+#playButton {
+  font-size: 40px;
+  font-family: "Aladin", cursive;
+  border-radius: 40px;
+  float: left;
+  max-height: 100px;
+  min-width: 180px;
+  display: block;
+  border: 6px solid rgb(39, 2, 118);
+  background-image: linear-gradient(to left, green, yellow);
+  color: rgb(39, 2, 118);
+  z-index: 1;
+}
+
+.rainbow-text {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  border: 0;
+  max-height: 100px;
+  align-self: center;
+  text-align: center;
+  font-size: 100px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red,
+    violet
+  );
+  background-size: 800% 800%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 8s ease infinite;
+}
+
+#solution {
+  margin-bottom: 40px;
+  border-radius: 40px;
+  font-size: 40px;
+  font-family: "Aladin", cursive;
+  max-height: 100px;
+  min-width: 180px;
+  border: 6px solid rgb(39, 2, 118);
+  color: rgb(39, 2, 118);
 }
 
 #submitDirections {
+  font-size: 40px;
+  font-family: "Aladin", cursive;
+  border-radius: 40px;
+  max-height: 100px;
+  min-width: 180px;
+  display: block;
+  border: 6px solid rgb(39, 2, 118);
+  background-image: linear-gradient(to left, green, yellow);
+  color: rgb(39, 2, 118);
+}
+
+::placeholder {
+  color: rgb(39, 2, 118);
+  opacity: 1;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 25%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
