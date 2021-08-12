@@ -55,18 +55,22 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(result);
     document.getElementById("directions").style.visibility = "hidden";
     let outcome = document.createElement("p");
+    document.getElementById("resultContainer").appendChild(outcome).className =
+      "outcome";
+    let playAgainButton = document.createElement("button");
+    document
+      .getElementById("resultContainer")
+      .appendChild(playAgainButton).className = "playAgainButton";
+    playAgainButton.innerHTML = "Play again!";
     if (result === "Finish") {
       outcome.innerHTML = "Congratulations, you are free!";
     } else {
-      outcome.innerHTML = "You are..." + result;
-      let tryAgainButton = document.createElement("button");
+      outcome.innerHTML = "Unlucky! You are " + result;
     }
 
-    document.getElementById("resultContainer").appendChild(outcome).className =
-      "outcome";
-    document
-      .getElementById("resultContainer")
-      .appendChild(tryAgainButton).className = "button";
+    playAgainButton.addEventListener("click", function () {
+      window.location.reload();
+    });
   }
 
   playButton.addEventListener("click", function () {

@@ -110,6 +110,18 @@ p {
   color: rgb(39, 2, 118);
 }
 
+.playAgainButton {
+  font-size: 40px;
+  font-family: "Aladin", cursive;
+  border-radius: 40px;
+  max-height: 100px;
+  min-width: 180px;
+  display: block;
+  border: 6px solid rgb(39, 2, 118);
+  background-image: linear-gradient(to left, green, yellow);
+  color: rgb(39, 2, 118);
+}
+
 ::placeholder {
   color: rgb(39, 2, 118);
   opacity: 1;
