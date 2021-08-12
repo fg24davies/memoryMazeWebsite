@@ -9,6 +9,7 @@
     "nodemon": "^2.0.12"
   },
   "scripts": {
+    "start": "node index.html",
     "test": "jest"
   },
   "jest": {
