@@ -1,4 +1,5 @@
-![image](https://user-images.githubusercontent.com/30720508/131891243-ab3eb50c-84a4-4d96-9c36-e87543365816.png)
+![image](https://user-images.githubusercontent.com/30720508/131891305-6915a002-5083-44f2-aa22-fdace2d0ff46.png)
+
 
 
 ## Memory Maze Game
