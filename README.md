@@ -32,7 +32,7 @@ Pipeline: [![Build Status](https://app.travis-ci.com/fg24davies/memoryMazeWebsit
 
 ##### 🏃🏼‍♀️ How to run the test suite 
 
-- Clone repository
+- Clone the repository
 - Run ```npm install```
 - Run ```npm run test ```
 
