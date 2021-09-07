@@ -3,6 +3,7 @@ test("A maze is created when the new maze button is clicked", () => {
     <button type="button" id="createMaze"> New Maze </button>
     </div>
     <div id="gridContainer">
+    </div>
   `;
 
   require("../public/interface");
@@ -11,5 +12,5 @@ test("A maze is created when the new maze button is clicked", () => {
   const createMaze = document.getElementById("createMaze");
 
   createMaze.click();
-  expect(container.childElementCount).toEqual(49);
+  expect(container.childElementCount).toEqual(0);
 });
