@@ -1,10 +1,10 @@
 ![image](https://user-images.githubusercontent.com/30720508/131891305-6915a002-5083-44f2-aa22-fdace2d0ff46.png)
 
-[![Coverage Status](https://coveralls.io/repos/github/fg24davies/memoryMazeWebsite/badge.svg)](https://coveralls.io/github/fg24davies/memoryMazeWebsite)
-
 ## Memory Maze Game
 
 [![Build Status](https://app.travis-ci.com/fg24davies/memoryMazeWebsite.svg?branch=main)](https://app.travis-ci.com/fg24davies/memoryMazeWebsite)
+
+[![Coverage Status](https://coveralls.io/repos/github/fg24davies/memoryMazeWebsite/badge.svg)](https://coveralls.io/github/fg24davies/memoryMazeWebsite)
 
 Based on the Codewars Kata [Maze Runner](https://www.codewars.com/kata/58663693b359c4a6560001d6) and the code I had written to solve the kata, I built a single page front end app which tests the users memory by showing a maze for 4 seconds and then asking for the directions to escape.
 
