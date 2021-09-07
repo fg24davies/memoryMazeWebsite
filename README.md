@@ -1,46 +1,45 @@
-### Memory Maze Game
-
-Testing in Jest, unit and feature
+![image](https://user-images.githubusercontent.com/30720508/131891305-6915a002-5083-44f2-aa22-fdace2d0ff46.png)
 
 
 
-[] Host on Heroku
+## Memory Maze Game
 
-JS
+Based on the Codewars Kata [Maze Runner](https://www.codewars.com/kata/58663693b359c4a6560001d6) and the code I had written to solve the kata, I built a single page front end app which tests the users memory by showing a maze for 4 seconds and then asking for the directions to escape.
 
-[] Congratulations message if won and play again
+On this project, I wanted to practise my JavaScript DOM, HTML and CSS. I tested the Javascript in Jest. The app is hosted on Heroku and uses Express for the server.
 
-[] Create 10 mazes and then randomly selected on Click
-
-[] Try again button if you fail
+To play please visit: https://memory-maze.herokuapp.com/
 
 
+#### Issues to fix
 
-Content
+[] Won't let you press escape or an alert comes up if you press enter without entering anything
+[] direction input doesn't have to be in capitals
+[] invalid characters/non nsew letters to have an alert?
+[] Test the front end
 
-[] Write clearer instructions
+Additional User Stories to be implemented
 
+```
+As a player
+So that I am always improving me memory
+I would like lots of different mazes
+```
 
+```
+As a player with a variable memory
+So that I can choose a level appropriate to how I'm feeling
+I would like the option small, medium and large maze
+```
 
-CSS
-[] choose colour pattern from book
+``` 
+As a developer
+I would like to generate the maze on click of the 'Play' button
+```
 
+#### What I learnt
 
-[] rainbow text the title
-
-[] move the maze to the middle
-
-[] style buttons
-
-[] rainbow text the 
-
-
-For the future
-
-Easy 5x5 , Medium 7x7 , Hard 10x10
-
-Generate a maze on click 
-
-
+- more CSS including animation
+- strengthened DOM skills, through timeouts, creating elements
 
 
