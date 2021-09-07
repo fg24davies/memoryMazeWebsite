@@ -40,9 +40,9 @@ Pipeline: [![Build Status](https://app.travis-ci.com/fg24davies/memoryMazeWebsit
 ### ✏️ Things to do
 
 - There is only one, hardcoded maze so 'playing again' is a bit meaningless
-- Following user stories to be implemented
 
-Extra user stories:
+- Following user stories to be implemented:
+
 ```
 As a player
 So that I am always improving me memory
